@@ -2,7 +2,7 @@ body{
     background-color: var(--body-color);
 }
 .images_section{
-    margin-top: 20px;
+    margin: 20px 10px;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px;
@@ -82,9 +82,12 @@ body{
     margin-top: 5%;
     display: flex;
     justify-content: space-evenly;
+    margin: 1%;
+    gap: 1%;
 }
 .offersBar > div{
     padding: 5% 3%;
+    width: 100%;
     background-color: var(--white-color);
 
 }
