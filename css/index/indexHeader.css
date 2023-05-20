@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --main-color:rgb(230, 230, 230);
+    --dropBoxs-labelColor: white;
+    --dropBoxs-color: white;
+    --dropBoxs-borderColor: rgba(161, 161, 161, 0.15);
+    --dropBoxs-itemHoverColor: rgb(233, 232, 232);
+    --yellow-color:#FED331;
+    --white-color:white;
+    --dropBoxs-arrowColor: black;
+    --general-textColor: #202429;
+    --mainBar-color: #202429;
+    --secondary-textColor: #505050;
+    --dropBoxs-arrowSize: 0.3em;
+    --body-color:#f5f5f5;
+}
+
+/** top bar section*/
+#linksTopBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: var(--main-color);
+}
+#linksTopBar .favsAndCart{
+    display: none;
+}
+#topLinks  ul > li{
+    cursor: pointer;
+}
+
+#topLinks  ul > li:hover{
+    text-decoration: underline;
+}
+#topLinks > ul >li{
+   list-style: none;
+   display: inline-block; 
+   padding: 10px;
+}
+
+#dropDownLists{
+    display: flex;
+    align-items: center;
+}
+.dropDownList{
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropDownList > label{
+    padding: 5px;
+    background-color: var(--dropBoxs-labelColor);
+}
+
+.dropDownList > label::after{
+    content: '';
+   border-top: var(--dropBoxs-arrowSize) solid;
+   border-left: var(--dropBoxs-arrowSize) solid transparent;
+   border-right:var(--dropBoxs-arrowSize) solid transparent;
+   display: inline-block;
+   margin: 3px;
+}
+
+.dropDownList > ul{
+    display: none;
+    position: absolute;
+    background-color: var(--dropBoxs-color);
+    top: 100%;
+    border: 1px var(--dropBoxs-borderColor) solid;
+    min-width: 100%;
+}
+
+.dropDownList > ul > li{
+    list-style: none;
+    padding: 5px;
+}
+
+.dropDownList:hover > ul{
+    display: block;
+}
+
+.dropDownList > ul > li:hover{
+    background-color: var(--dropBoxs-itemHoverColor);
+}
+
+.dropDownList:hover > label::after{
+    transform: rotate(180deg);
+    transition: 0.4s;
+}
+/*---------------------------------------------------------------*/
+/** logo bar section*/
+#logoBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+}
+
+.logo{
+  width: 20%;
+}
+.logo > img{
+    width: 100%;
+}
+
+
+#searchSection{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    margin: 2% 0;
+}
+
+#searchSection >input{
+    width: 50%;
+    font-size: large;
+    text-align: center;
+    border: 1px solid var(--dropBoxs-borderColor);
+}
+#searchSection > button{
+    padding: 0.5%;
+    color: var(--yellow-color);
+    font-size: 20px;
+    background-color: var(--white-color);
+    border: 1px solid var(--dropBoxs-borderColor);
+}
+
+#customerServiceSection{
+    display: flex;
+    flex-direction: column;
+}
+
+#customerServiceSection > .customerService{
+    color: var(--secondary-textColor);
+    font-size: medium;
+}
+#customerServiceSection > .customerServiceNum{
+    color: var(--general-textColor);
+    font-size: large;
+    font-weight: bold;
+}
+/*-------------------------------------------------------------------------*/
+/** Main Bar Section*/
+#mainNavBar{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 6%;
+    background-color: var(--mainBar-color);
+  
+}
+/**categories section*/
+#categoriesSection{
+    position: relative;
+    background-color: var(--yellow-color);
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 2%;
+   
+}
+
+#categoriesSection > ul {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+#categoriesSection > ul > li{
+    padding: 5px;
+    cursor: pointer;
+}
+
+#categoriesSection > label{
+    flex-grow: 1;
+    margin-left: 10px;
+}
+#categoriesSection:hover > ul{
+    display: block;
+    background-color: var(--dropBoxs-color);
+    border: 1px solid var(--dropBoxs-borderColor);
+    min-width: 100%;
+}
+#categoriesSection:hover > :nth-child(3){
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+#categoriesSection:hover > ul > li:hover
+{
+    background-color: var(--dropBoxs-itemHoverColor);
+}
+/**main pages*/
+#linksSection{
+    flex-grow: 1;
+    color: var(--white-color);
+    position: relative;
+}
+#linksSection ul{
+    list-style: none;
+    padding: 1.5% 2%;
+}
+
+#linksSection > ul > li{
+    display: inline-block;
+    padding: 0 1%;
+    cursor: pointer;
+}
+
+#linksSection > ul > li:hover{
+    color: var(--yellow-color);
+}
+#linksSection > ul > li:nth-child(4):hover > ul{
+    display: block;
+    
+}
+
+#linksSection > ul > li:nth-child(4):hover > i{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+#linksSection > ul > li:nth-child(4):hover > ul > li:hover{
+    background-color: var(--dropBoxs-itemHoverColor);
+}
+
+#linksSection > ul > li > ul{
+    position: absolute;
+    display: none;
+    color: black;
+    background-color: var(--dropBoxs-color);
+    border: 1px solid var(--dropBoxs-borderColor);
+   z-index: 1;
+}
+#linksSection > ul > li > ul>li{
+    padding: 5px;
+}
+
+/**Favs and cart*/
+.favsAndCart{
+    display: flex;
+}
+.favsAndCart ul{
+    list-style: none;
+    margin-right: 15px;
+}
+.favsAndCart ul > li{
+    display: inline-block;
+    cursor: pointer;
+}
+.favsAndCart ul > li > i{
+    color: var(--yellow-color);
+    font-size: 1.2rem;
+}
+.favsAndCart ul > li > div{
+    color: var(--white-color);
+    border: 1px var(--white-color) solid;
+    padding: 0 5px;
+    border-radius: 50%;
+}
+
+/**--------------------------------------------------------------------*/
+/**mobile main nav*/
+#mobileMainNavBar{
+    display: flex;
+    background-color: var(--mainBar-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--dropBoxs-color);
+    display: none;
+}
+#mobileMainNavBar > .logo{
+    width: 30%;
+}
+#mobileMainNavBar > .menu > div{
+   color: var(--dropBoxs-color);
+   font-size: 1.5rem;
+   border: 1px var(--dropBoxs-borderColor) solid;
+   padding: 10px 15px;
+   border-radius: 10%;
+   cursor: pointer;
+}
+#mobileMainNavBar > .menu {
+    position: relative;
+}
+
+#mobileMainNavBar > .menu > div >i{
+    color: var(--dropBoxs-color);
+}
+#mobileMainNavBar > .menu > ul{
+    list-style: none;
+    color: var(--general-textColor);
+    position: absolute;
+    z-index: 1;
+    right: 10%;
+    min-width: 9rem;
+    background-color: var(--dropBoxs-color);
+    border: 1px var(--dropBoxs-borderColor) solid;
+    display: none;
+}
+#mobileMainNavBar > .menu li{
+    cursor: pointer;
+}
+
+.subList  ul{
+    list-style: none;
+    display: none;
+}
+.subList:hover  ul{
+    display: block;
+}
+.subList:hover > i{
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+#mobileMainNavBar > .menu ul > li >div > ul{
+    margin-left: 20px;
+}
+
+#mobileMainNavBar > .menu ul > li >div > label{
+    position: relative;
+}
+#mobileMainNavBar > .menu:hover > ul{
+    display: block;
+}

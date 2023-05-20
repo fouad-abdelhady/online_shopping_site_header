@@ -1,0 +1,179 @@
+body{
+    background-color: var(--body-color);
+}
+.images_section{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+.images_section :first-child{
+   
+    grid-area: 1/1/3/3;
+}
+.images_section > div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.images_section > div > img{
+    width: 100%;
+    height: 100%;
+   
+}
+.images_section > div > div{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
+    text-align: center;
+}
+.images_section > div > div:hover{
+    background-color: rgba(0, 0, 0, 0.425);
+}
+.images_section :first-child > div :first-child{
+    font-size: 1.5rem;
+    padding: 3% 0;
+}
+.images_section :first-child > div :nth-child(2){
+    margin: 0 20%;
+    font-weight: normal;
+    font-size: 1rem;
+}
+.images_section :first-child > div > button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 4%;
+}
+.images_section :first-child > div > button:hover{
+    background-color: var(--yellow-color);
+    color: var(--general-textColor);
+    border-color: var(--yellow-color);
+}
+.images_section > div > div :nth-child(2){
+    font-size: 1.4rem;
+   font-weight: bold;
+}
+.images_section > div > div > button{
+    border: 1px solid var(--yellow-color);
+    background-color: var(--yellow-color);
+    color: var(--general-textColor);
+    padding: 10px 15px;
+    margin-top: 4%;
+}
+.images_section > div > div > button:hover{
+    border: 1px solid var(--white-color);
+    background-color: transparent;
+    color: var(--white-color);
+    padding: 10px 15px;
+    margin-top: 4%;
+}
+
+.offersBar{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.offersBar > div{
+    padding: 5% 3%;
+    background-color: var(--white-color);
+
+}
+
+.offersBar > div > i{
+    color: var(--yellow-color);
+    font-size: 1.8rem;
+  
+}
+.offersBar > div > i{
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width: 795px) {
+    .images_section{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+   
+    .images_section > div{
+        background-color: var(--yellow-color);
+       height: 20rem;
+    }
+    .images_section >div > img{
+        object-fit: cover;
+    }
+    .images_section > div > div > button{
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        padding: 10px 15px;
+        margin-top: 4%;
+    }
+    .images_section > div > div > button:hover{
+        background-color: var(--yellow-color);
+        color: var(--general-textColor);
+        border-color: var(--yellow-color);
+    }
+    #logoBar, #mainNavBar, #topLinks{
+        display: none;
+    }
+    #linksTopBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 5%;
+        background-color: var(--main-color);
+    }
+    #linksTopBar .favsAndCart{
+        display: flex;
+        padding-left:2%;
+        margin-top: 2px;
+    }
+    #linksTopBar  .favsAndCart li > div, i {
+        color: var(--general-textColor);
+        border-color: var(--general-textColor);
+    }
+    #linksTopBar  .favsAndCart li i {
+        color: var(--general-textColor);
+        border-color: var(--general-textColor);
+    }
+    #mobileMainNavBar{
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .images_section :first-child > div :nth-child(2){
+        margin: 0 0;
+        font-weight: normal;
+        font-size: 1rem;
+    }  
+}
+@media screen and (max-width:450px) {
+    .offersBar{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:1300px) {
+    .offersBar > div{
+        padding: 3rem 2rem;
+        background-color: var(--white-color);
+        
+    }
+}

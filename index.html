@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Shop</title>
+    <link rel="stylesheet" href="./css/index/indexHeader.css">
+    <link rel="stylesheet" href="./css/index/indexBody.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e95a6ea3dc.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+         <!--Links, account, currency, and language-->
+        <nav id="linksTopBar">
+            <div id="topLinks">
+                <ul>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Help</li>
+                    <li>FQAs</li>
+                </ul>
+            </div>
+            <div id="dropDownLists">
+                <!--Account options Dropdown-->
+                <div class="dropDownList" id="accountOptionsDropDown">
+                    <label>My Account</label>
+                    <ul>
+                        <li>Log In</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </div>
+                <!--Currency Dropdown-->
+                <div class="dropDownList" id="currencyDropDown">
+                    <label>EGP</label>
+                    <ul>
+                        <li>SAR</li>
+                        <li>USD</li>
+                    </ul>
+                </div>
+                <!--Language Dropdown-->
+                <div class="dropDownList" id="languageDropDown">
+                    <label>EN</label>
+                    <ul>
+                        <li>AR</li>
+                        <li>RU</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="favsAndCart">
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Logo, Search text field, and customer service-->
+        <nav id="logoBar">
+            <div class="logo">
+                <img src="./res/1.png"/>
+            </div>
+            <div id="searchSection">
+                <input type="text" placeholder="Search for Products">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div id="customerServiceSection">
+                <label class="customerService"> Customer Service</label>
+                <label class="customerServiceNum">+012 345 6789</label>
+            </div>
+        </nav>
+        <!--Website main pages, favs, and cart bar-->
+        <nav id="mainNavBar">
+            <div id="categoriesSection">
+                <i class="fa-solid fa-bars"></i>
+                <label> Categories</label>
+                <i class="fa-solid fa-angle-down"></i>
+                <ul>
+                    <li>BestSellers</li>
+                    <li>New Releases</li>
+                    <hr>
+                    <li>Women Clothing</li>
+                    <li>Men Clothing</li>
+                    <li>Kids Clothing</li>
+                    <li>Teens Clothing</li>
+                    <li>Women Accessories</li>
+                    <li>Men Accessories</li>
+                    <hr>
+                    <li>Our Outlets</li>
+                </ul>
+            </div>
+            <div id="linksSection">
+                <ul>
+                    <li>Home</li>
+                    <li>Shope</li>
+                    <li>Shop Details</li>
+                    <li>Pages <i class="fa-solid fa-angle-down"></i>
+                        <ul>
+                            <li>Page one</li>
+                            <li>Page two</li>
+                            <li>Page three</li>
+                            <li>Page four</li>
+                            <li>Page five</li>
+                            <li>Page six</li>
+                        </ul>
+                    </li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="favsAndCart">
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-heart"></i></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-cart-shopping"></i></li>
+                        <li><div>0</div></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Mobile main navbar-->
+        <nav id="mobileMainNavBar">
+            <div class="logo">
+                <img src="./res/2.png"/></div>
+            <div class="menu">
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul>
+                    <b>Pages</b> <hr>
+                    <li>Home</li>
+                    <li>Shope</li>
+                    <li>Shop Details</li>
+                    <li class="subList">Pages <i class="fa-solid fa-caret-down"></i><div>
+                        <ul>
+                            <li>Page one</li>
+                            <li>Page two</li>
+                            <li>Page three</li>
+                            <li>Page four</li>
+                            <li>Page five</li>
+                            <li>Page six</li>
+                        </ul>
+                    </div>
+                    </li>
+                    <li>Contact</li>
+                    <br><b>Categories</b><hr>
+                    <li>BestSellers</li>
+                    <li>New Releases</li>
+                    <li>Women Clothing</li>
+                    <li>Men Clothing</li>
+                    <li>Kids Clothing</li>
+                    <li>Teens Clothing</li>
+                    <li>Women Accessories</li>
+                    <li>Men Accessories</li>
+                    <li>Our Outlets</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="images_section">
+        <div> 
+            <img src="./res/fashion1.jpg">
+            <div>
+               <label>WOMEN FASHION</label>
+               <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quidem blanditiis recusandae saepe nam perferendis non.</label>
+               <button>SHOP NOW</button>
+            </div>
+        </div>
+        <div> 
+            <img src="./res/fashion2.jpg">
+            <div>
+                <label>SAVE 20%</label>
+                <label>Special Offer</label>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+        <div> 
+            <img src="./res/fashion3.jpg">
+            <div>
+                <label>SAVE 20%</label>
+                <label>Special Offer</label>
+                <button>SHOP NOW</button>
+            </div>
+        </div>
+    </section>
+    <section class="offersBar">
+        <div>
+            <i class="fa-sharp fa-solid fa-check"></i> <label>Quality Product</label>
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-truck-fast"></i> <label>Free Shipping</label>
+        </div>
+        <div>
+            <i class="fa-solid fa-arrows-spin"></i> <label>14-Day Return</label>
+        </div>
+        <div>
+            <i class="fa-solid fa-phone-volume"></i> <label>24/7 Support</label>
+        </div>
+    </section>
+</body>
+</html>
