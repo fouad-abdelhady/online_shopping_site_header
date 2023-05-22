@@ -18,6 +18,7 @@
     --secondary-textColor: #505050;
     --dropBoxs-arrowSize: 0.3em;
     --body-color:#f5f5f5;
+    --subtitle_textColor: rgb(112, 112, 112);
 }
 
 /** top bar section*/
@@ -52,11 +53,13 @@
     padding: 5px;
     position: relative;
     cursor: pointer;
+   
 }
 
 .dropDownList > label{
     padding: 5px;
     background-color: var(--dropBoxs-labelColor);
+    overflow: hidden;
 }
 
 .dropDownList > label::after{
@@ -75,6 +78,7 @@
     top: 100%;
     border: 1px var(--dropBoxs-borderColor) solid;
     min-width: 100%;
+    z-index: 1;
 }
 
 .dropDownList > ul > li{
@@ -281,6 +285,7 @@
     padding: 10px;
     color: var(--dropBoxs-color);
     display: none;
+    position: relative;
 }
 #mobileMainNavBar > .logo{
     width: 30%;
@@ -293,21 +298,20 @@
    border-radius: 10%;
    cursor: pointer;
 }
-#mobileMainNavBar > .menu {
-    position: relative;
-}
 
 #mobileMainNavBar > .menu > div >i{
     color: var(--dropBoxs-color);
 }
 #mobileMainNavBar > .menu > ul{
     list-style: none;
-    color: var(--general-textColor);
+    color: var(--white-color);
     position: absolute;
     z-index: 1;
-    right: 10%;
+    left: 0;
+    right: 0;
+    top:100%-10;
     min-width: 9rem;
-    background-color: var(--dropBoxs-color);
+    background-color: var(--mainBar-color);
     border: 1px var(--dropBoxs-borderColor) solid;
     display: none;
 }

@@ -16,11 +16,54 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow: hidden;
 }
+.images_section > div:not(:first-child):hover > img{
+    transform: rotate(5deg) scale(1.2);
+    transition: 1s ;
+}
+@keyframes mainImageTextAnimation {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+@keyframes buttonColor {
+    from {
+        background-color: #fed23100;
+        border: 1px solid white;
+        color: white;
+    }
+    to{
+        background-color: #fed231;
+        border: 1px solid #fed231;
+        color: var(--general-textColor);
+    }
+}
+/*@keyframes carocell {
+    0% {content: url("../../res/fashion1.jpg");}
+    50% {content: url("../../res/carocell_1.jpg");}
+    100% {content: url("../../res/carocell_2.jpg");}
+}*/
+.images_section :first-child:hover > div :nth-child(2){
+    animation-name: mainImageTextAnimation;
+    animation-duration: 1s;
+}
+.images_section :first-child:hover > img{
+    animation-name: mainImageTextAnimation;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-out;
+}
+/*.images_section :first-child > img{
+    width: 100%;
+    height: 100%;
+    animation-name: carocell;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}*/
 .images_section > div > img{
     width: 100%;
     height: 100%;
-   
 }
 .images_section > div > div{
     position: absolute;
@@ -35,9 +78,9 @@ body{
     color: white;
     text-align: center;
 }
-.images_section > div > div:hover{
+/*.images_section > div > div:hover{
     background-color: rgba(0, 0, 0, 0.425);
-}
+}*/
 .images_section :first-child > div :first-child{
     font-size: 1.5rem;
     padding: 3% 0;
@@ -58,6 +101,9 @@ body{
     background-color: var(--yellow-color);
     color: var(--general-textColor);
     border-color: var(--yellow-color);
+    animation-name: buttonColor;
+    animation-duration: 1s;
+    animation-direction: normal;
 }
 .images_section > div > div :nth-child(2){
     font-size: 1.4rem;
@@ -76,8 +122,10 @@ body{
     color: var(--white-color);
     padding: 10px 15px;
     margin-top: 4%;
+    animation-name: buttonColor;
+    animation-duration: 0.4s;
+    animation-direction: reverse;
 }
-
 .offersBar{
     margin-top: 5%;
     display: flex;
@@ -91,6 +139,10 @@ body{
     background-color: var(--white-color);
 
 }
+.offersBar > div:hover {
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
 
 .offersBar > div > i{
     color: var(--yellow-color);
@@ -98,18 +150,98 @@ body{
   
 }
 .offersBar > div > i{
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 
+/**---------------------------------------------------------------*/
+/**Categories Section*/
+.sectionTitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    color: var(--general-textColor);
+}
+.sectionTitle > h2{
+    display: inline;
+}
+.sectionTitle > div{
+    content: '';
+    width: 100%;
+    border-bottom: 1.5px dashed var(--dropBoxs-borderColor);
+    display: inline-block;
+    height: 1px;
+    
+}
+.categoriesContainer{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.categoriesContainer > div{
+    background-color: var(--white-color);
+    display: grid;  
+    grid-template-columns: auto 1fr;
+    
+}
+@keyframes categoryItemBackGroundColor {
+    from {background-color: var(--white-color);}
+    to {background-color: var(--yellow-color);}
+}
+.categoriesContainer > div:hover{
+    background-color: var(--yellow-color);
+    animation-name: categoryItemBackGroundColor;
+    animation-duration: 0.7s;
+}
+.categoriesContainer > div:hover > :first-child > img{
+    transform: rotate(5deg) scale(1.2);
+    transition: 0.5s;
+}
+.categoriesContainer > div :first-child{
+   height: 100%;
+  
+   overflow: hidden;
+   grid-row: 1/3;
+   height: 7rem;
+   margin-right: 5px;
+}
+.categoriesContainer > div :nth-child(2){
+    display: flex;
+    align-items: end;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.categoriesContainer > div :nth-child(3){
+    color: var(--subtitle_textColor);
+}
+
+@media screen and (max-width:450px) {
+    .offersBar{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:500px) {
+    .images_section :first-child > div :nth-child(2){
+        margin: 0 0;
+        font-weight: normal;
+        font-size: 1rem;
+    }  
+}
 @media screen and (max-width: 795px) {
+    
     .images_section{
         margin: 20px;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-   
     .images_section > div{
         background-color: var(--yellow-color);
        height: 20rem;
@@ -128,6 +260,9 @@ body{
         background-color: var(--yellow-color);
         color: var(--general-textColor);
         border-color: var(--yellow-color);
+        animation-name: buttonColor;
+        animation-duration: 1s;
+        animation-direction: normal;
     }
     #logoBar, #mainNavBar, #topLinks{
         display: none;
@@ -155,22 +290,30 @@ body{
     #mobileMainNavBar{
         display: flex;
     }
+    
 }
-
-
-@media screen and (max-width:500px) {
-    .images_section :first-child > div :nth-child(2){
-        margin: 0 0;
-        font-weight: normal;
-        font-size: 1rem;
-    }  
+@media screen and (max-width:1000px) {
+    .categoriesContainer{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
 }
-@media screen and (max-width:450px) {
-    .offersBar{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        text-align: center;
+@media screen and (max-width:800px){
+    .categoriesContainer{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+@media screen and (max-width:550px){
+    .categoriesContainer{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
 @media screen and (min-width:1300px) {
@@ -180,3 +323,8 @@ body{
         
     }
 }
+
+
+
+
+
